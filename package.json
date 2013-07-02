@@ -1,0 +1,39 @@
+{
+  "name": "ndarray-scratch",
+  "version": "0.0.0",
+  "description": "Pooled memory for ndarrays",
+  "main": "scratch.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "ndarray": "~1.0.3",
+    "typedarray-pool": "~0.1.1"
+  },
+  "devDependencies": {
+    "tape": "~1.0.4"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/ndarray-scratch.git"
+  },
+  "keywords": [
+    "ndarray",
+    "pool",
+    "memory",
+    "typedarray",
+    "scratch",
+    "malloc",
+    "free"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "65525b62e25c70355a09b362b7aa13183acd4964",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/ndarray-scratch/issues"
+  }
+}
