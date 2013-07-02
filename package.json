@@ -1,6 +1,6 @@
 {
   "name": "ndarray-scratch",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Pooled memory for ndarrays",
   "main": "scratch.js",
   "directories": {
