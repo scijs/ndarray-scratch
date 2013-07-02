@@ -11,7 +11,7 @@ function malloc(shape, dtype) {
   var stride = new Array(shape.length)
   for(var i=shape.length-1; i>=0; --i) {
     stride[i] = sz
-    sz *= i
+    sz *= shape[i]
   }
   return ndarray(pool.malloc(sz, dtype), shape, stride, 0)
 }
