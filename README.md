@@ -41,5 +41,12 @@ Releases a temporary ndarray
 
 * `array` is the ndarray to release.
 
+### `pool.clone(array)`
+Creates a copy of an ndarray with row-major order.
+
+* `array` is an ndarray
+
+**Returns** A temporary copy of `array`
+
 ## Credits
 (c) 2013 Mikola Lysenko. MIT License

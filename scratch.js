@@ -1,7 +1,20 @@
 "use strict"
 
 var ndarray = require("ndarray")
+var ops = require("ndarray-ops")
 var pool = require("typedarray-pool")
+
+function clone(array) {
+  var dtype = array.dtype
+  if(dtype === "generic" || dtype === "array") {
+    dtype = "double"
+  }
+  var data = pool.malloc(array.size, dtype)
+  var result = ndarray(data, array.shape)
+  ops.assign(result, array)
+  return result
+}
+exports.clone = clone
 
 function malloc(shape, dtype) {
   if(!dtype) {

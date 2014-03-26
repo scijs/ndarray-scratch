@@ -1,14 +1,15 @@
 {
   "name": "ndarray-scratch",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Pooled memory for ndarrays",
   "main": "scratch.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "ndarray": "~1.0.3",
-    "typedarray-pool": "~0.1.1"
+    "ndarray": "^1.0.11",
+    "typedarray-pool": "^1.0.0",
+    "ndarray-ops": "^1.2.1"
   },
   "devDependencies": {
     "tape": "~1.0.4"
