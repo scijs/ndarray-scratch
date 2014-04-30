@@ -32,9 +32,17 @@ var pool = require("ndarray-pool")
 Allocates a temporary ndarray
 
 * `shape` is the shape of the array to allocate
-* `dtype` is the dtype of the array to allocate (default `double`)
+* `dtype` is the dtype of the array to allocate (default `"double"`)
 
 **Returns** a temporary ndarray
+
+### `pool.zeros(shape[,dtype])`
+Creates a scratch ndarray initialized to `0`
+
+* `shape` is the shape of the resulting array
+* `dtype` is the datatype of the array (default `"double"`)
+
+**Returns** A temporary ndarray initialized to 0
 
 ### `pool.free(array)`
 Releases a temporary ndarray
@@ -47,6 +55,7 @@ Creates a copy of an ndarray with row-major order.
 * `array` is an ndarray
 
 **Returns** A temporary copy of `array`
+
 
 ## Credits
 (c) 2013 Mikola Lysenko. MIT License

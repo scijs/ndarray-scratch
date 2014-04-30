@@ -34,3 +34,22 @@ function free(array) {
   pool.free(array.data)
 }
 exports.free = free
+
+function zeros(shape, dtype) {
+  if(!dtype) {
+    dtype = "double"
+  }
+
+  var sz = 1
+  var stride = new Array(shape.length)
+  for(var i=shape.length-1; i>=0; --i) {
+    stride[i] = sz
+    sz *= shape[i]
+  }
+  var buf = pool.malloc(sz, dtype)
+  for(var i=0; i<sz; ++i) {
+    buf[i] = 0
+  }
+  return ndarray(buf, shape, stride, 0)
+}
+exports.zeros = zeros
