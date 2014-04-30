@@ -2,11 +2,10 @@ ndarray-scratch
 ===============
 A simple wrapper for typedarray-pool.  I got tired of manually constructing ndarrays from typedarrays, and so this module saves some keystrokes/sanity.
 
-## Example
+# Example
 
 ```javascript
 var pool = require("ndarray-scratch")
-
 
 //Create a temporary typed array
 var x = pool.malloc([100,100])
@@ -17,12 +16,11 @@ var x = pool.malloc([100,100])
 pool.free(x)
 ```
 
-## Install
+# Install
 
     npm install ndarray-scratch
-    
 
-## API
+# API
 
 ```javascript
 var pool = require("ndarray-pool")
@@ -56,6 +54,5 @@ Creates a copy of an ndarray with row-major order.
 
 **Returns** A temporary copy of `array`
 
-
-## Credits
-(c) 2013 Mikola Lysenko. MIT License
+# Credits
+(c) 2013-2014 Mikola Lysenko. MIT License
