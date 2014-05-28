@@ -31,6 +31,9 @@ function malloc(shape, dtype) {
 exports.malloc = malloc
 
 function free(array) {
+  if(array.dtype === "generic" || array.dtype === "array") {
+    return
+  }
   pool.free(array.data)
 }
 exports.free = free
