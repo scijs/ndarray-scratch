@@ -1,21 +1,21 @@
 {
   "name": "ndarray-scratch",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Pooled memory for ndarrays",
   "main": "scratch.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "ndarray": "^1.0.13",
-    "typedarray-pool": "^1.0.0",
+    "ndarray": "^1.0.14",
+    "typedarray-pool": "^1.0.2",
     "ndarray-ops": "^1.2.1"
   },
   "devDependencies": {
-    "tape": "~1.0.4"
+    "tape": "^2.13.1"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
@@ -40,7 +40,7 @@
   "testling": {
     "files": "test/*.js",
     "browsers": [
-      "ie/8..latest",
+      "ie/10..latest",
       "firefox/17..latest",
       "firefox/nightly",
       "chrome/22..latest",
