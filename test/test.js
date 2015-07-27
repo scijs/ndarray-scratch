@@ -1,7 +1,6 @@
 "use strict"
 
 var pool = require("../scratch.js")
-  , show = require('ndarray-show')
 
 require("tape")("ndarray-scratch", function(t) {
 
