@@ -2,9 +2,9 @@ ndarray-scratch
 ===============
 A simple wrapper for typedarray-pool.  I got tired of manually constructing ndarrays from typedarrays, and so this module saves some keystrokes/sanity.
 
-[![testling badge](https://ci.testling.com/mikolalysenko/ndarray-scratch.png)](https://ci.testling.com/mikolalysenko/ndarray-scratch)
+[![testling badge](https://ci.testling.com/scijs/ndarray-scratch.png)](https://ci.testling.com/scijs/ndarray-scratch)
 
-[![build status](https://secure.travis-ci.org/mikolalysenko/ndarray-scratch.png)](http://travis-ci.org/mikolalysenko/ndarray-scratch)
+[![build status](https://secure.travis-ci.org/scijs/ndarray-scratch.png)](http://travis-ci.org/scijs/ndarray-scratch)
 
 # Example
 
@@ -45,6 +45,22 @@ Creates a scratch ndarray initialized to `0`
 * `dtype` is the datatype of the array (default `"double"`)
 
 **Returns** A temporary ndarray initialized to 0
+
+### `pool.ones(shape[,dtype])`
+Creates a scratch ndarray initialized to `1`
+
+* `shape` is the shape of the resulting array
+* `dtype` is the datatype of the array (default `"double"`)
+
+**Returns** A temporary ndarray initialized to 1
+
+### `pool.eye(shape[,dtype])`
+Creates a scratch ndarray initialized to `1` if all indices equal, `0` otherwise.
+
+* `shape` is the shape of the resulting array
+* `dtype` is the datatype of the array (default `"double"`)
+
+**Returns** A temporary ndarray initialized to the identity matrix
 
 ### `pool.free(array)`
 Releases a temporary ndarray
