@@ -2,9 +2,9 @@ ndarray-scratch
 ===============
 A simple wrapper for typedarray-pool.  I got tired of manually constructing ndarrays from typedarrays, and so this module saves some keystrokes/sanity.
 
-[![testling badge](https://ci.testling.com/mikolalysenko/ndarray-scratch.png)](https://ci.testling.com/mikolalysenko/ndarray-scratch)
+[![testling badge](https://ci.testling.com/scijs/ndarray-scratch.png)](https://ci.testling.com/scijs/ndarray-scratch)
 
-[![build status](https://secure.travis-ci.org/mikolalysenko/ndarray-scratch.png)](http://travis-ci.org/mikolalysenko/ndarray-scratch)
+[![build status](https://secure.travis-ci.org/scijs/ndarray-scratch.png)](http://travis-ci.org/scijs/ndarray-scratch)
 
 # Example
 
