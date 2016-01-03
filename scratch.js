@@ -14,6 +14,9 @@ function poolMalloc(sz, dtype) {
 
 function clone(array) {
   var dtype = array.dtype
+  if(array.dtype === "generic") {
+    dtype = 'double'
+  }
   var data = poolMalloc(array.size, dtype)
   var result = ndarray(data, array.shape)
   ops.assign(result, array)
