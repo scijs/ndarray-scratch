@@ -4,12 +4,17 @@ var ndarray = require("ndarray")
 var ops = require("ndarray-ops")
 var pool = require("typedarray-pool")
 
+function poolMalloc(sz, dtype) {
+  if (dtype==='array') {
+    return new Array(sz)
+  } else {
+    return pool.malloc(sz,dtype)
+  }
+}
+
 function clone(array) {
   var dtype = array.dtype
-  if(dtype === "generic" || dtype === "array") {
-    dtype = "double"
-  }
-  var data = pool.malloc(array.size, dtype)
+  var data = poolMalloc(array.size, dtype)
   var result = ndarray(data, array.shape)
   ops.assign(result, array)
   return result
@@ -26,7 +31,7 @@ function malloc(shape, dtype) {
     stride[i] = sz
     sz *= shape[i]
   }
-  return ndarray(pool.malloc(sz, dtype), shape, stride, 0)
+  return ndarray(poolMalloc(sz, dtype), shape, stride, 0)
 }
 exports.malloc = malloc
 
@@ -49,7 +54,7 @@ function zeros(shape, dtype) {
     stride[i] = sz
     sz *= shape[i]
   }
-  var buf = pool.malloc(sz, dtype)
+  var buf = poolMalloc(sz, dtype)
   for(var i=0; i<sz; ++i) {
     buf[i] = 0
   }
@@ -68,7 +73,7 @@ function ones(shape, dtype) {
     stride[i] = sz
     sz *= shape[i]
   }
-  var buf = pool.malloc(sz, dtype)
+  var buf = poolMalloc(sz, dtype)
   for(var i=0; i<sz; ++i) {
     buf[i] = 1
   }
@@ -88,7 +93,7 @@ function eye(shape, dtype) {
     stride[i] = sz
     sz *= shape[i]
   }
-  var buf = pool.malloc(sz, dtype)
+  var buf = poolMalloc(sz, dtype)
   for(i=0; i<sz; ++i) {
     buf[i] = 0
   }
