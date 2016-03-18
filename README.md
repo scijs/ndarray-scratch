@@ -27,7 +27,7 @@ pool.free(x)
 # API
 
 ```javascript
-var pool = require("ndarray-pool")
+var pool = require("ndarray-scratch")
 ```
 
 ### `pool.malloc(shape[, dtype])`
